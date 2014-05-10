@@ -1,0 +1,31 @@
+{
+  "name": "watchrun",
+  "version": "0.0.1",
+  "description": "Watching directory and run command",
+  "keywords": [
+    "utility"
+  ],
+  "homepage": "https://github.com/ngyuki/node-watchrun",
+  "bugs": {
+    "url": "https://github.com/ngyuki/node-watchrun/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Toshiyuki Goto",
+    "email": "ngyuki.ts@gmail.com",
+    "url": "https://github.com/ngyuki/"
+  },
+  "main": "lib/watch.js",
+  "bin": {
+    "watchrun": "bin/watchrun.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngyuki/node-watchrun.git"
+  },
+  "dependencies": {
+    "colors": "~0.6.2",
+    "watchr": "~2.4.11"
+  },
+  "devDependencies": {}
+}
