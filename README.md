@@ -5,7 +5,7 @@ Watching directory to ad hoc will run command.
 ## Install
 
 ```console
-$ npm install -g ngyuki/node-watchrun
+$ npm install -g ngyuki/watchrun
 ```
 
 ## Example
@@ -13,9 +13,9 @@ $ npm install -g ngyuki/node-watchrun
 Watching current directory.
 
 ```console
-$ watchrun ./ -- date
+$ watchrun date
 Command: [ 'date' ]
-Waiting...
+Pattern: [ '**/*' ]
 ```
 
 Update file by other console.
@@ -29,9 +29,9 @@ $ touch ./README.md
 ```console
 $ watchrun ./ -- date
 Command: [ 'date' ]
-Waiting... update README.md
 
-Thu May 22 09:25:49 JST 2014
+Waiting... changed README.md
+Thu Apr  7 22:51:02 JST 2016
 
 Waiting...
 ```
@@ -42,11 +42,11 @@ Waiting...
 Therefore, the following does not work.
 
 ```
-watchrun a.c -- 'gcc a.c && ./a.out'
+watchrun 'gcc a.c && ./a.out'
 ```
 
 Please use `-c` option of bash as below.
 
 ```
-watchrun a.c -- bach -c 'gcc a.c && ./a.out'
+watchrun bach -c 'gcc a.c && ./a.out'
 ```
