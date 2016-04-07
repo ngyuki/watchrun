@@ -1,6 +1,6 @@
 {
   "name": "watchrun",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Watching directory to ad hoc will run command",
   "keywords": [
     "utility"
