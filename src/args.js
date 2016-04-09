@@ -3,16 +3,25 @@ import sys from 'util'
 const help = `
 Usage: watchrun [-w pattern]... [-i interval] [-d delay] <command> [args]...
 
-    -w pattern  Glob pattern (default: **\/*)
-    -i interval Pooling interval milliseconds (default: 500)
-    -d delay    Execute delay milliseconds (default: 250)
-    command     This command run when directory has been changed
-    args        Arguments of command
+    -w pattern
+        Glob patterns (default: **\/*).
+
+    -i interval
+        Pooling interval milliseconds (default: 500).
+
+    -d delay
+        Execute delay milliseconds (default: 250).
+
+    command
+        This command run when directory has been changed.
+
+    args
+        Arguments of command.
 `;
 
 function usage()
 {
-    sys.error(help.trim())
+    console.error(help.trim())
     process.exit(1);
 }
 
