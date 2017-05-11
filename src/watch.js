@@ -1,4 +1,4 @@
-import sys from 'util'
+import util from 'util'
 import { spawn } from 'child_process'
 import gaze from 'gaze'
 import colors from 'colors'
@@ -13,8 +13,8 @@ function watch(opts)
     _args = opts.commandArgs.slice(0);
     _command = _args.shift();
 
-    sys.puts(("Command: " + sys.inspect(opts.commandArgs)).cyan);
-    sys.puts(("Pattern: " + sys.inspect(opts.patterns)).cyan);
+    console.error(("Command: " + util.inspect(opts.commandArgs)).cyan);
+    console.error(("Pattern: " + util.inspect(opts.patterns)).cyan);
 
     // add default ignore pattern
     let patterns = [].concat(opts.patterns, ['!node_modules/**']);
@@ -27,7 +27,7 @@ function watch(opts)
 
 function prompt()
 {
-    sys.print("\nWaiting...".cyan);
+    process.stderr.write("\nWaiting...".cyan);
 }
 
 function changed(event, filename)
@@ -36,7 +36,7 @@ function changed(event, filename)
         _running = true;
 
         if (event && filename) {
-            sys.puts((" " + event + " " + filename).magenta);
+            console.error((" " + event + " " + filename).magenta);
         }
 
         execute(() => {
@@ -50,7 +50,7 @@ function execute(done)
 {
     spawn(_command, _args, { stdio: 'inherit' })
         .on('error', (err) => {
-            sys.print(("\n" + err + "\n").redBG);
+            process.stderr.write(("\n" + err + "\n").redBG);
             done();
         })
         .on('exit', () => {
