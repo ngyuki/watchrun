@@ -79,11 +79,11 @@ function parse(args)
     interval = parseInt(interval);
     delay = parseInt(delay);
 
-    if ((interval !== interval) || (interval <= 0)) {
+    if ((interval !== interval) || (interval < 0)) {
         return false;
     }
 
-    if ((delay !== delay) || (delay <= 0)) {
+    if ((delay !== delay) || (delay < 0)) {
         return false;
     }
 

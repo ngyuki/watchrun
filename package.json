@@ -24,8 +24,8 @@
     "url": "https://github.com/ngyuki/watchrun.git"
   },
   "dependencies": {
-    "colors": "^1.1.2",
-    "gaze": "^1.0.0"
+    "chokidar": "^1.7.0",
+    "colors": "^1.1.2"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
