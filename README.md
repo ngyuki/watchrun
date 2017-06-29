@@ -5,7 +5,7 @@ Watching directory to ad hoc will run command.
 ## Install
 
 ```console
-$ npm install -g ngyuki/watchrun
+$ npm install -g watchrun
 ```
 
 ## Example
