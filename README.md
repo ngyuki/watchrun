@@ -2,6 +2,10 @@
 
 Watching directory to ad hoc will run command.
 
+## Demo
+
+[![asciicast](https://asciinema.org/a/4QfKEro8sp4CaX5q4LkBJoExN.svg)](https://asciinema.org/a/4QfKEro8sp4CaX5q4LkBJoExN)
+
 ## Install
 
 ```console
